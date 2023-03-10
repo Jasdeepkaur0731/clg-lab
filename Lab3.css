@@ -11,12 +11,13 @@ header, nav, main, footer {
   padding: 1rem;
 }
 
-header {
+.header1 {
   background-color: #6da2ec;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: rgb(13, 10, 59);
 }
+
 
 nav ul {
   list-style: none;
