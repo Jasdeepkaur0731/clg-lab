@@ -5,13 +5,18 @@ body {
   margin: 0;
   padding: 0;
 }
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
 
 header, nav, main, footer {
   display: block;
   padding: 1rem;
 }
 
-.header1 {
+.header1s {
   background-color: #6da2ec;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -84,11 +89,12 @@ table {
   border-collapse: collapse;
   width: 50%;
   margin-top: 2rem;
+  
 }
 
 th, td {
   padding: 0.5rem;
-  text-align: left;
+  text-align:center;
   border: 2px solid #ccc;
   background-color: #cebcce;
 }
@@ -105,4 +111,53 @@ footer {
   text-align: center;
   margin-top: 2rem;
   padding: 1rem;
+}
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
+.flex-container > div {
+  background-color: rgb(36, 61, 87);
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  text-align: center;
+  color: aliceblue;
+  height: 110px;
+  width:300px;
+  line-height: 50px;
+  font-size:inherit;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  background-color: #051c2f;
+  padding: 50px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid black;
+  text-align: center;
+  font-size: 45px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
